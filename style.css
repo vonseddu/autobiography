@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Background Animation */
+body {
+  background: linear-gradient(120deg, #1a1b3a, #13244f, #8a3e14, #dd7d23);
+  background-size: 300% 300%;
+  min-height: 100vh;
+  animation: bgMove 10s infinite alternate ease-in-out;
+  color: white;
+}
+
+/* Header */
+header {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-box img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50px;
+  border: 2px solid white;
+}
+
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #e2e2e2;
+  font-size: 14px;
+  transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #fff;
+  border-bottom: 2px solid #ffcc00;
+}
+
+/* Buttons */
+.nav-btn, .nav-btn-outline {
+  padding: 10px 20px;
+  font-size: 13px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-btn {
+  background: #fff;
+  border: none;
+  color: #000;
+}
+
+.nav-btn-outline {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.nav-btn:hover {
+  background: #f3c25e;
+}
+
+.nav-btn-outline:hover {
+  border-color: #f3c25e;
+  color: #f3c25e;
+}
+
+/* Hero Section */
+.hero {
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  color: #fff;
+  opacity: 0;
+  animation: fadeInUp 2s forwards;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #ff8c00, #ffc400);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* About Page Content */
+.content {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+.content h1 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.content h2 {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #ffd700;
+}
+
+.content p {
+  margin-top: 10px;
+  line-height: 1.6;
+  color: #f2f2f2;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Animations */
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes fadeInUp {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0px); opacity: 1; }
+}
